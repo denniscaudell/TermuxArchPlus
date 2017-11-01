@@ -16,7 +16,7 @@
 
 [@mjskoneg](https://github.com/mjskoneg) submitted issues. Result: setupTermuxArch.sh improved! 
 
-[@Neo-Oli](https://github.com/Neo-Oli) suggested `unset LD_PRELOAD` to resolve issue when using `termux-exec`. Result: setupTermuxArch.sh improved! 
+[@Neo-Oli](https://github.com/Neo-Oli) suggested `unset LD_PRELOAD` to resolve an issue when using `termux-exec`. Result: setupTermuxArch.sh improved! 
 
 [@Soph1a7](https://github.com/Soph1a7) contributed to issues and submitted pull requests (locale-gen, printf, quiet, mirror, et al added).  Also provided numerous constructive suggestions.  Result: setupTermuxArch.sh greatly improved, and working with this project improved! 
 
