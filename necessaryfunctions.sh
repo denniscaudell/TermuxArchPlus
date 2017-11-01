@@ -37,7 +37,7 @@ askuser ()
 	done
 }
 
-checkme ()
+integratycheck ()
 {
 	if md5sum -c termuxarchchecksum.md5; then
 		printmd5syschksuccess 
@@ -51,7 +51,7 @@ checkme ()
 
 detectsystem ()
 {
-	checkme
+	integratycheck 
 	mkdir -p $HOME/arch
 	cd $HOME/arch
 	printdetectedsystem
