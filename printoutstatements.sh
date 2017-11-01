@@ -42,7 +42,7 @@ printmd5success ()
 
 printmd5syschkerror ()
 {
-	printf "\n⛔\033[31;1m md5sum mismatch! Setup initialization corrupted! \n\n\033[33;1mPlease update your copy of \`setupTermuxArch.sh\` from https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh and run it again!\n\n\033[32;1mSee https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.\n\n\033[31;1mExiting...\033[0m\n"
+	printf "\n⛔\033[31;1m md5sum mismatch! Setup initialization corrupt! \n\n\033[33;1mPlease update your copy of \`setupTermuxArch.sh\` from https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh and run it again!\n\n\033[32;1mSee https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.\n\n\033[31;1mExiting...\033[0m\n"
 }
 
 printmd5syschksuccess ()
