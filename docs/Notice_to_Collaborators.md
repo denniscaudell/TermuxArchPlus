@@ -8,15 +8,15 @@ __Source code goals for this project are:__
 
 Contributions have helped in the successful development of this script and project immensely.  Understanding the goals and workings of this project shall make interacting with this project all the more rewarding.  If you are considering collaborating, help is wanted in:
 1. Coding - Submit modifications in the root directory at [https://github.com/sdrausty/TermuxArch](https://github.com/sdrausty/TermuxArch)
-2. Documentation - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArch](https://github.com/sdrausty/TermuxArch)
+2. Documentation - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArch)
 3. Screenshots - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus)
 4. Animation - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus)
 
 These pages and projects can be altered to our desire. Please think of them as a wiki pages that you have access to change if you want.  Thank you for contributing and collaborating to those who have helped improve this project.  
 
 Additional information: 
-* All Termux Arch related issues and pull requests should be addressed through [https://github.com/sdrausty/TermuxArch](https://github.com/sdrausty/TermuxArch) for text changes,
-* All Termux Arch related issues and pull requests should be delivered through [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus) for graphics and other presentation medium.
+* All Termux Arch related issues and pull requests should be addressed through [https://github.com/sdrausty/TermuxArch](https://github.com/sdrausty/TermuxArch) for script changes,
+* All Termux Arch related issues and pull requests should be delivered through [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus) for documentation, graphics and other presentation medium.
 
 __To avoid "git bloat", this repository is reset periodically!__  If you get a `fatal: refusing to merge unrelated histories` message while working with `git`, save the work from your current clone, and re-clone this project.
 
