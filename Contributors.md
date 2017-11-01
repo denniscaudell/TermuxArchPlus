@@ -16,6 +16,8 @@
 
 [@mjskoneg](https://github.com/mjskoneg) submitted issues. Result: setupTermuxArch.sh improved! 
 
+[@Neo-Oli](https://github.com/Neo-Oli) suggested `unset LD_PRELOAD` to resolve issue when using `termux-exec`. Result: setupTermuxArch.sh improved! 
+
 [@Soph1a7](https://github.com/Soph1a7) contributed to issues and submitted pull requests (locale-gen, printf, quiet, mirror, et al added).  Also provided numerous constructive suggestions.  Result: setupTermuxArch.sh greatly improved, and working with this project improved! 
 
 Thank you for making this project work better and please contribute 🔆  See [Notice to Collaborators](https://sdrausty.github.io/TermuxArchPlus/Notice_to_Collaborators) for more information.  Please see [PRoot](https://sdrausty.github.io/TermuxArchPlus/PRoot) for more information about Linux on device with Termux and visit the [Termux wiki website](https://wiki.termux.com/) for more information.
