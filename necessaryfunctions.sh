@@ -16,7 +16,7 @@ adjustmd5file ()
 	fi
 }
 
-checksystem1 ()
+checkme ()
 {
 	if md5sum -c termuxarchchecksum.md5; then
 		printmd5syschksuccess 
@@ -28,14 +28,14 @@ checksystem1 ()
 	fi
 }
 
-checksystem2 ()
+detectsystem2 ()
 {
 	case $(uname -o) in
 		"Android" ) 
 			armv7lAndroid 
 			;;
 		"GNU/Linux" ) 
-			checksystem2q 
+			askuser 
 			;; 
 		*)
 			printmismatch 
@@ -43,7 +43,7 @@ checksystem2 ()
 	esac
 }
 
-checksystem2q ()
+askuser ()
 {
 	printf "\n\033[32;1m"
 	while true; do
@@ -127,9 +127,9 @@ makesystem ()
 	printfooter
 }
 
-system ()
+detectsystem ()
 {
-	checksystem1
+	checkme
 	mkdir -p $HOME/arch
 	cd $HOME/arch
 	printdetectedsystem
@@ -138,7 +138,7 @@ system ()
 			aarch64
 			;;
 		"armv7l" ) 
-			checksystem2
+			detectsystem2 
 			;; 
 		"i686" ) 
 			i686 

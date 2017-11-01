@@ -29,7 +29,7 @@ depends ()
 #-------------------------------------------------------------------------------
 
 depends
-system
+detectsystem 
 $HOME/arch/$bin
 printtail
 exit 
