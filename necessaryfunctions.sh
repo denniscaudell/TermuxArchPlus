@@ -30,8 +30,6 @@ checksystem1 ()
 
 checksystem2 ()
 {
-	mkdir -p $HOME/arch
-	cd $HOME/arch
 	case $(uname -o) in
 		"Android" ) 
 			armv7lAndroid 
