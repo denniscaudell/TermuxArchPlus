@@ -8,11 +8,11 @@
 adjustmd5file ()
 {
 	if [ "$(uname -m)" = "x86_64" ] || [ "$(uname -m)" = "i686" ];then
-		wget -N --show-progress -q http://$mirror${path}md5sums.txt
+		wget -q --show-progress http://$mirror${path}md5sums.txt
 		sed '2q;d' md5sums.txt > $file.md5
 		rm md5sums.txt
 	else
-		wget -N --show-progress -q http://$mirror$path$file.md5
+		wget -q -nc --show-progress http://$mirror$path$file.md5
 	fi
 }
 
@@ -114,7 +114,7 @@ makesystem ()
 {
 	printdownloading 
 	adjustmd5file 
-	wget -c --show-progress -q http://$mirror$path$file
+	wget -q -c --show-progress http://$mirror$path$file
 	printmd5check
 	if md5sum -c $file.md5; then
 		printmd5success

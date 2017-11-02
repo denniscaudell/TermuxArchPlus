@@ -12,15 +12,14 @@ sleep 1
 printf "\nUpdating Termux and installing the required components for Arch Linux installation.\033[0m\n"
 
 apt-get -qq update && apt-get -qq upgrade --yes
-apt-get -qq install proot wget --yes 
+apt-get -qq install --yes bsdtar proot wget 
 
 depends ()
 {
-	wget -N -q --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/knownconfigurations.sh
-	wget -N -q --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/necessaryfunctions.sh
-	wget -N -q --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/printoutstatements.sh
-	wget -N -q --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh
-	wget -N -q --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/termuxarchchecksum.md5
+	wget -q -nc --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/knownconfigurations.sh
+	wget -q -nc --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/necessaryfunctions.sh
+	wget -q -nc --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/printoutstatements.sh
+	wget -q -nc --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/termuxarchchecksum.md5
 	. ./knownconfigurations.sh
 	. ./necessaryfunctions.sh
 	. ./printoutstatements.sh
