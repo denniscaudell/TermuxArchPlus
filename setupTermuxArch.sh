@@ -12,7 +12,7 @@ sleep 1
 printf "\nUpdating Termux and installing the required components for Arch Linux installation.\033[0m\n"
 
 apt-get -qq update && apt-get -qq upgrade --yes
-apt-get -qq install bsdtar proot wget --yes 
+apt-get -qq install proot wget --yes 
 
 depends ()
 {
