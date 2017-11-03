@@ -34,7 +34,7 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[32;1m\n  Now uncompressing \033[34;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer;\033[32;1m Be patient.  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete 🕙  \n"
+	printf "\033[32;1m\n  Now uncompressing \033[33;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer!  Be patient.\033[32;1m  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete 🕙  \n"
 }
 
 printmd5syschkerror ()
@@ -54,6 +54,6 @@ printmismatch ()
 
 printtail ()
 {
-	printf "\033[33;1m\n  Use \033[37;1m\`./arch/$bin\`\033[33;1m from your \033[37;1m\`\$HOME\`\033[33;1m directory to launch Arch Linux in Termux for future sessions.  This can be abbreviated to \033[37;1m\`!.\`\033[33;1m at the bash prompt after starting a session in Termux.  Thank you for using \033[37;1m\`setupTermuxArch.sh\`\033[33;1m to install Arch Linux in Termux.  \033[0m\n\n" '\033]2;  Thank you for using `setupTermuxArch.sh` 💎 \007'
+	printf "\033[33;1m\n  Use \033[37;1m\`./arch/$bin\`\033[33;1m from your \033[37;1m\`\$HOME\`\033[33;1m directory to launch Arch Linux in Termux for future sessions.  This can be abbreviated to \033[37;1m\`!.\`\033[33;1m at the bash prompt after starting a session in Termux.  Thank you for using \033[37;1m\`setupTermuxArch.sh\`\033[33;1m to install Arch Linux in Termux.  \033[0m\n\n"'\033]2;  Thank you for using `setupTermuxArch.sh` 💎 \007'
 }
 
