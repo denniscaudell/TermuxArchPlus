@@ -32,7 +32,7 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[32;1m\n  Now uncompressing \033[36;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer;\033[32;1m Be patient.  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete ⏳  \n"
+	printf "\033[32;1m\n  Now uncompressing \033[34;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer;\033[32;1m Be patient.  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete ⏳  \n"
 }
 
 printmd5syschkerror ()
