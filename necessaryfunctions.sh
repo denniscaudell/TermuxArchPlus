@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/sh -e
+#!/bin/sh -e
 # Copyright 2017 by SDRausty. All rights reserved.
 # See https://sdrausty.github.io/TermuxArch/Contributors
 # Website for this project at https://sdrausty.github.io/TermuxArch
@@ -94,7 +94,7 @@ makebin ()
 	cat > $bin <<- EOM
 	#!/data/data/com.termux/files/usr/bin/sh -e
 	unset LD_PRELOAD
-	proot --link2symlink -0 -r $HOME/arch/$sysp -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
+	exec proot --link2symlink -0 -r $HOME/arch/$sysp -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
 	EOM
 	chmod 700 $bin
 	cd  $HOME/arch/$sysp

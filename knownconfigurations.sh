@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/sh -e
+#!/bin/sh -e
 # Copyright 2017 by SDRausty. All rights reserved.
 # See https://sdrausty.github.io/TermuxArch/Contributors
 # Website for this project at https://sdrausty.github.io/TermuxArch
