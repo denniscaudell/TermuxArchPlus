@@ -26,3 +26,4 @@ $HOME/arch/$bin
 printtail
 exit 
 
+
