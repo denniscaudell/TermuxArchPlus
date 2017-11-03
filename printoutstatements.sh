@@ -12,7 +12,7 @@ printdeleteq ()
 
 printdetectedsystem ()
 {
-	printf "\n\033[32;1mDetected $(uname -mo).  Good 🔆  \033[0m\n"
+	printf "\n\033[32;1mDetected $(uname -mo).  OK 🔆  \033[0m\n"
 }
 
 printdownloading ()
