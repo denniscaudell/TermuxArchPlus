@@ -17,7 +17,7 @@ printdetectedsystem ()
 
 printdownloading ()
 {
-	printf "\n\033[32;1mNow downloading \033[33;1m\`$file\`\033[32;1m and the corresponding checksum.  \n\n	This may take a long time depending on your Internet speed; Be patient ⏳  \033[0m\n\n"
+	printf "\n\033[32;1mNow downloading \033[33;1m\`$file\`\033[32;1m and the corresponding checksum.  This may take a long time depending on your Internet speed; Be patient ⏳  \033[0m\n\n"
 }
 
 printfooter()
