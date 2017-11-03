@@ -8,7 +8,7 @@ This Termux setup shell script will attempt to set Arch Linux up in your Termux 
 
 * Pull requests are welcome [https://github.com/sdrausty/TermuxArch/pulls](https://github.com/sdrausty/TermuxArch/pulls) ✍ 
 
-Thank you for making this project work better and please contribute 🔆  See [Contributors](./Contributors).  See [Notice to Collaborators](https://sdrausty.github.io/TermuxArchPlus/Notice_to_Collaborators) for more information about this project.
+Thank you for making this project work better and please contribute 🔆  See [Contributors](./Contributors).  See [Notice to Contributors](https://sdrausty.github.io/TermuxArchPlus/Notice_to_Contributors) for more information about this project.
 
 ![Screenshot of Arch On Termux](https://sdrausty.github.io/TermuxArchPlus/IMG_20171019_190414.jpg)
 

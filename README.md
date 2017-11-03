@@ -4,5 +4,5 @@ This Termux setup shell script will attempt to set Arch Linux up in your Termux 
 
 * Pull requests are welcome https://github.com/sdrausty/TermuxArch/pulls ✍ 
 
-Thank you for making this project work better and please contribute 🔆  See https://sdrausty.github.io/TermuxArch/Notice_to_Collaborators for more information.  Please visit the Termux wiki website at http://wiki.termux.com for more information about working with Linux on device in Termux.
+Thank you for making this project work better and please contribute 🔆  See https://sdrausty.github.io/TermuxArch/Notice_to_Contributors for more information.  Please visit the Termux wiki website at http://wiki.termux.com for more information about working with Linux on device in Termux.
 
