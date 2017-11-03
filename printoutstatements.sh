@@ -2,17 +2,18 @@
 # Copyright 2017 by SDRausty. All rights reserved.
 # See https://sdrausty.github.io/TermuxArch/Contributors
 # Website for this project at https://sdrausty.github.io/TermuxArch
+# 🕛 🕜 🕟
 # Printout statement subroutines for `setupTermuxArch.sh`.
 ################################################################################
 
 printdetectedsystem ()
 {
-	printf "\033[36;1m\n  Detected $(uname -mo) 🔆  \n"
+	printf "\033[36;1m\n  Detected $(uname -mo) 🛩  \n"
 }
 
 printdownloading ()
 {
-	printf "\033[34;1m\n  Now downloading \033[37;1m\`$file\`\033[34;1m and the corresponding checksum ⛵  This may take a long time depending on your Internet speed; Be patient.  If you are going to set your device aside, ensure \033[37;1m\`termux-wake-lock\`\033[34;1m is active to let this process complete ⏳  \n\n"
+	printf "\033[34;1m\n  Now downloading \033[37;1m\`$file\`\033[34;1m and the corresponding checksum ⛵  This may take a long time depending on your Internet speed; Be patient.  If you are going to set your device aside, ensure \033[37;1m\`termux-wake-lock\`\033[34;1m is active to let this process complete 🕛  \n\n"
 }
 
 printfooter()
@@ -22,7 +23,7 @@ printfooter()
 
 printmd5check ()
 {
-	printf "\033[33;1m\n  Checking download integrity with md5sum. This may take a while.  \n\n"
+	printf "\033[33;1m\n  Checking download integrity with md5sum. This may take a while. 🕜  \n\n"
 }
 
 printmd5error ()
@@ -32,7 +33,7 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[32;1m\n  Now uncompressing \033[34;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer;\033[32;1m Be patient.  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete ⏳  \n"
+	printf "\033[32;1m\n  Now uncompressing \033[34;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer;\033[32;1m Be patient.  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete 🕟  \n"
 }
 
 printmd5syschkerror ()
