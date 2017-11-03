@@ -37,7 +37,7 @@ printmd5success ()
 
 printmd5syschkerror ()
 {
-	printf "\033[31;1m\n    🔆  ERROR md5sum mismatch!  Setup initialization mismatch!\033[32;1m  Update your copy of \033[37;1m\`setupTermuxArch.sh\`\033[32;1m.  If you have updated it, this kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended. Especially if you are using a fresh copy from \033[37;1m\`https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\`\033[32;1m on your system.  There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means this initialization was corrupt.  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \n\n	\033[37;1mRun \`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
+	printf "\033[31;1m\n    🔆  ERROR md5sum mismatch!  Setup initialization mismatch!\033[32;1m  Update your copy of \033[33;1m\`setupTermuxArch.sh\`\033[32;1m.  If you have updated it, this kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended. Especially if you are using a fresh copy from \033[30;1m\`https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\`\033[32;1m on your system.  There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means this initialization was corrupt.  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \n\n	\033[33;1mRun \`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
 }
 
 printmd5syschksuccess ()

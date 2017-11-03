@@ -2,10 +2,11 @@
 # Copyright 2017 by SDRausty. All rights reserved.
 # See https://sdrausty.github.io/TermuxArch/Contributors
 # Website for this project at https://sdrausty.github.io/TermuxArch
+# 🌍 🌎 🌏 🌐 🗺
 # Change mirror to your desired geographic location in `knownconfigurations.sh`.
 ################################################################################
 
-printf '\033]2;  Thank you for using `setupTermuxArch.sh` 💎 \007'"\n\033[36;1m	This setup script will attempt to set Arch Linux up in your Termux environment.  When successfully completed, you will be at the bash prompt in Arch Linux in Termux.  Updating Termux and installing the required components for Arch Linux installation.  \n\n"
+printf '\033]2;  Thank you for using `setupTermuxArch.sh` 💎 \007'"\n\033[36;1m	This setup script will attempt to set Arch Linux up in your Termux environment.  When successfully completed, you will be at the bash prompt in Arch Linux in Termux.  Updating Termux and installing the required components for Arch Linux installation.  🚀  \n\n"
 
 apt-get -qq update && apt-get -qq upgrade --yes
 apt-get -qq install bsdtar coreutils proot sed wget --yes 
