@@ -20,7 +20,6 @@ wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch
 . ./printoutstatements.sh
 
 # Main Block
-depends
 detectsystem 
 $HOME/arch/$bin
 printtail
