@@ -8,11 +8,11 @@
 adjustmd5file ()
 {
 	if [ "$(uname -m)" = "x86_64" ] || [ "$(uname -m)" = "i686" ];then
-		wget -q --show-progress http://$mirror${path}md5sums.txt
+		wget -q -N --show-progress http://$mirror${path}md5sums.txt
 		sed '2q;d' md5sums.txt > $file.md5
 		rm md5sums.txt
 	else
-		wget -q -nc --show-progress http://$mirror$path$file.md5
+		wget -q -N --show-progress http://$mirror$path$file.md5
 	fi
 }
 
@@ -55,38 +55,28 @@ detectsystem ()
 	mkdir -p $HOME/arch
 	cd $HOME/arch
 	printdetectedsystem
-	case $(uname -m) in
-		"aarch64" )
-			aarch64
-			;;
-		"armv7l" ) 
-			detectsystem2 
-			;; 
-		"i686" ) 
-			i686 
-			;;
-		"x86_64" ) 
-			x86_64
-			;;
-		*)
-			printmismatch 
-			;;
-	esac
+	if [ "$(uname -m)" = "aarch64" ];then
+		aarch64
+	elif [ "$(uname -m)" = "armv7l" ];then
+		detectsystem2 
+	elif [ "$(uname -m)" = "i686" ];then
+		i686 
+	elif [ "$(uname -m)" = "x86_64" ];then
+		x86_64
+	else
+		printmismatch 
+	fi
 }
 
 detectsystem2 ()
 {
-	case $(uname -o) in
-		"Android" ) 
-			armv7lAndroid 
-			;;
-		"GNU/Linux" ) 
-			askuser 
-			;; 
-		*)
-			printmismatch 
-			;;
-	esac
+	if [ "$(uname -o)" = "Android" ];then
+		armv7lAndroid 
+	elif [ "$(uname -o)" = "GNU/Linux" ];then
+		askuser 
+	else
+		printmismatch 
+	fi
 }
 
 makebin ()
