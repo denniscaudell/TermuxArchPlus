@@ -12,7 +12,7 @@ printdeleteq ()
 
 printdetectedsystem ()
 {
-	printf "\n\033[32;1mDetected $(uname -mo).  Congratulations 🔆  \033[0m\n"
+	printf "\n\033[32;1mDetected $(uname -mo).  Good 🔆  \033[0m\n"
 }
 
 printdownloading ()
@@ -32,17 +32,17 @@ printmd5check ()
 
 printmd5error ()
 {
-	printf "\n⛔\033[31;1m md5sum mismatch! The download was corrupt. Removing failed download.  \033[0m\n\n\033[33;1m	Please run \`setupTermuxArch.sh\` again!  \n\n\033[32;1m	See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \n	If this keeps repeating, please change your mirror with an editor like vi.  \n\033[32;1m	See https://sdrausty.github.io/TermuxArchPlus/mirrors for more information.  \033[0m\n\n\033[31;1m	Exiting...  \033[0m\n"
+	printf "\n⛔\033[31;1m md5sum mismatch! The download was corrupt. Removing failed download.\033[0m\033[33;1m  Run \`setupTermuxArch.sh\` again!\033[32;1m  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  If this keeps repeating, please change your mirror with an editor like vi.\033[32;1m  See https://sdrausty.github.io/TermuxArchPlus/mirrors for more information.\033[31;1m  Exiting...  \033[0m\n"
 }
 
 printmd5success ()
 {
-	printf "\n\033[32;1mNow uncompressing \033[33;1m\`$file\`\033[32;1m.\n\n	This will take \033[33;1mmuch longer\033[32;1m; Be patient ⏳ If you are going to set your device aside, ensure \`termux-wake-lock\` is active to let this process complete. \033[0m\n"
+	printf "\n\033[32;1mNow uncompressing \033[33;1m\`$file\`\033[32;1m.  This will take \033[33;1mmuch longer\033[32;1m; Be patient ⏳ If you are going to set your device aside, ensure \`termux-wake-lock\` is active to let this process complete. \033[0m\n"
 }
 
 printmd5syschkerror ()
 {
-	printf "\n⛔\033[31;1m md5sum mismatch! Setup initialization corrupt! \n\n\033[33;1m	Update your copy of \`\033[32;1msetupTermuxArch.sh\033[33;1m\` manually.  Waiting a few minutes before executing again is recommended if you have a fresh copy of \`\033[32;1mhttps://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\033[33;1m\` on your system.  \n\n\033[32;1m	See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \n\n\033[31;1m	Exiting...  \033[0m\n"
+	printf "\n  ⛔\033[31;1m md5sum mismatch! Setup initialization corrupt!  \033[33;1m  Update your copy of \`\033[32;1msetupTermuxArch.sh\033[33;1m\` manually.  Waiting a few minutes before executing again is recommended if you have a fresh copy of \`\033[32;1mhttps://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\033[33;1m\` on your system.\033[32;1m  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \n\n\033[31;1m	Exiting...  \033[0m\n"
 }
 
 printmd5syschksuccess ()
