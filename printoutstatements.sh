@@ -3,6 +3,7 @@
 # See https://sdrausty.github.io/TermuxArch/Contributors
 # Website for this project at https://sdrausty.github.io/TermuxArch
 # 🕛 🕜 🕟
+# 🕐🕘🕙🕚🕛🕜🕞🕟🕑🕒🕓🕔🕕🕖🕗🕠🕡🕢🕤🕥
 # Printout statement subroutines for `setupTermuxArch.sh`.
 ################################################################################
 
@@ -23,7 +24,7 @@ printfooter()
 
 printmd5check ()
 {
-	printf "\033[33;1m\n  Checking download integrity with md5sum. This may take a while. 🕜  \n\n"
+	printf "\033[33;1m\n  Checking download integrity with md5sum. This may take a while. 🕟  \n\n"
 }
 
 printmd5error ()
@@ -33,12 +34,12 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[32;1m\n  Now uncompressing \033[34;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer;\033[32;1m Be patient.  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete 🕟  \n"
+	printf "\033[32;1m\n  Now uncompressing \033[34;1m\`$file\`\033[32;1m.  \033[33;1mThis will take much longer;\033[32;1m Be patient.  If you are going to set your device aside, ensure \033[33;1m\`termux-wake-lock\`\033[32;1m is active to let this process complete 🕙  \n"
 }
 
 printmd5syschkerror ()
 {
-	printf "\033[07;1m\033[31;1m\n  🔆 ERROR md5sum mismatch!  Setup initialization mismatch!  Update your copy of \`setupTermuxArch.sh\`.  If you have updated it, this kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended, especially if you are using a fresh copy from \`https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\` on your system.  There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means,  \"Try again, this initialization was not successful.\"  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \n\n	\`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
+	printf "\033[07;1m\033[31;1m\n  🔆 ERROR md5sum mismatch!  Setup initialization mismatch!  Update your copy of \`setupTermuxArch.sh\`.  If you have updated it, this kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended, especially if you are using a fresh copy from \`https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\` on your system.  There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means,  \"Try again, this initialization was not successful.\"  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \033[31;1m\n\n	\`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
 }
 
 printmd5syschksuccess ()
