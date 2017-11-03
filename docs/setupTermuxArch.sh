@@ -8,13 +8,13 @@
 printf '\033]2;  Thank you for using `setupTermuxArch.sh` 💎 \007'"\n\033[32;1m	This setup script will attempt to set Arch Linux up in your Termux environment.  When successfully completed, you will be at the bash prompt in Arch Linux in Termux.  Updating Termux and installing the required components for Arch Linux installation.  \n\n"
 
 apt-get -qq update && apt-get -qq upgrade --yes
-apt-get -qq install bsdtar proot wget --yes 
+apt-get -qq install bsdtar coreutils proot sed wget --yes 
 
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/knownconfigurations.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/necessaryfunctions.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/printoutstatements.sh
-wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/termuxarchchecksum.md5
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh
+wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/termuxarchchecksum.md5
 . ./knownconfigurations.sh
 . ./necessaryfunctions.sh
 . ./printoutstatements.sh
