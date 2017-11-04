@@ -1,6 +1,6 @@
 #!/bin/sh -e
 # Copyright 2017 by SDRausty. All rights reserved.
-# See https://sdrausty.github.io/TermuxArch/Contributors
+# See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Website for this project at https://sdrausty.github.io/TermuxArch
 # add submodules media docs
 ################################################################################
