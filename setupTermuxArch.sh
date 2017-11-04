@@ -21,7 +21,7 @@ wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch
 
 # Main Block
 detectsystem 
-$HOME/arch/$bin
+$HOME/arch/$bin ||:
 printtail
 exit 
 
