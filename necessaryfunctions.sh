@@ -105,7 +105,6 @@ makesystem ()
 	printdownloading 
 	adjustmd5file 
 	wget -q -c --show-progress http://$mirror$path$file
-	printf "🌊"
 	printmd5check
 	if md5sum -c $file.md5; then
 		printmd5success
