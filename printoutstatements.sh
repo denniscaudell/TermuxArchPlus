@@ -13,7 +13,7 @@ printdetectedsystem ()
 
 printdownloading ()
 {
-	printf "\033[34;1m\n 🕑 Now downloading \033[37;1m\`$file\`\033[34;1m and the corresponding checksum.  This may take a long time depending on your Internet speed; Be patient ⛵  If you are going to set your device aside, ensure \033[37;1m\`termux-wake-lock\`\033[34;1m is active to let this process complete.  \n\n"
+	printf "\033[34;1m\n 🕑 Now downloading \033[36;1m\`$file\`\033[34;1m and the corresponding checksum.  This may take a long time depending on your Internet speed; Be patient ⛵  If you are going to set your device aside, ensure \033[36;1m\`termux-wake-lock\`\033[34;1m is active to let this process complete.  \n\n"
 }
 
 printfooter()
@@ -28,7 +28,7 @@ printmd5check ()
 
 printmd5error ()
 {
-	printf "\033[07;1m\033[31;1m\n 🔆 ERROR md5sum mismatch! The download was corrupt! Removing failed download.\033[33;1m  Run \033[37;1m\`setupTermuxArch.sh\`\033[33;1m again!  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  This kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended. There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means this download was corrupt.  If this keeps repeating, please change your mirror with an editor like vi in \033[37;1m\`knownconfigurations.sh\`\033[33;1m.  See https://sdrausty.github.io/TermuxArchPlus/mirrors for more information.  \n\n	\033[0m\033[37;1mRun \`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
+	printf "\033[07;1m\033[31;1m\n 🔆 ERROR md5sum mismatch! The download was corrupt! Removing failed download.  Run \033[37;1m\`setupTermuxArch.sh\`\033[33;1m again!  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.\033[33;1m  This kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended. There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means this download was corrupt.  If this keeps repeating, please change your mirror with an editor like vi in \033[37;1m\`knownconfigurations.sh\`\033[33;1m.  See https://sdrausty.github.io/TermuxArchPlus/mirrors for more information.  \n\n	\033[0m\033[37;1mRun \`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
 }
 
 printmd5success ()
@@ -38,7 +38,7 @@ printmd5success ()
 
 printmd5syschkerror ()
 {
-	printf "\033[07;1m\033[31;1m\n 🔆 ERROR md5sum mismatch!  Setup initialization mismatch!  Update your copy of \`setupTermuxArch.sh\`.  If you have updated it, this kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended, especially if you are using a fresh copy from \`https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\` on your system.  There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means,  \"Try again, this initialization was not successful.\"  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \033[31;1m\n\n	Run \`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
+	printf "\033[07;1m\033[31;1m\n 🔆 ERROR md5sum mismatch!  Setup initialization mismatch!  Update your copy of \`setupTermuxArch.sh\`.\033[33;1m  If you have updated it, this kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended, especially if you are using a fresh copy from \`https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh\` on your system.  There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means,  \"Try again, this initialization was not successful.\"  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \033[31;1m\n\n	Run \`setupTermuxArch.sh\` again. \033[31;1mExiting...  \033[0m\n"
 }
 
 printmd5syschksuccess ()
