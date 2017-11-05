@@ -1,1 +1,1 @@
-placeholder for TermuxArchPlus documentation.
+Placeholder for TermuxArch documentation
