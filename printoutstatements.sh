@@ -13,7 +13,7 @@ printdetectedsystem ()
 
 printdownloading ()
 {
-	printf "\033[34;1m\033[44;1m\n 🕑 Now downloading \033[36;1m$file\033[34;1m and the corresponding checksum 🐬	This may take a long time depending on your Internet speed 🚤	Be patient ⛵	If you are going to set your device aside, ensure \033[36;1mtermux-wake-lock\033[34;1m is active to let this process complete.	🏄  \n\n"
+	printf "\033[34;1m\033[44;1m\n 🕑 Now downloading \033[36;1m$file\033[34;1m and the corresponding checksum 🐬  This may take a long time depending on your Internet speed 🚤  Be patient ⛵  If you are going to set your device aside, ensure \033[36;1mtermux-wake-lock\033[34;1m is active to let this process complete.  🏄  \n\n"
 }
 
 printfooter()
@@ -33,7 +33,7 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[32;1m\033[42;1m\n 🕖 Now uncompressing \033[33;1m$file\033[32;1m.  \033[33;1mThis will take much longer!  Be patient ⛺🌴  \033[32;1m  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[32;1m is active to let this process complete.	🌲🏡  \n"
+	printf "\033[32;1m\033[42;1m\n 🕖 Now uncompressing \033[33;1m$file\033[32;1m.  \033[33;1mThis will take much longer!  Be patient ⛺🌴  \033[32;1m  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[32;1m is active to let this process complete.  🌲🏡  \n"
 }
 
 printmd5syschkerror ()
