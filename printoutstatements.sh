@@ -18,7 +18,7 @@ printdownloading ()
 
 printfooter()
 {
-	printf "\033[33;1m\033[42;1m\n 🕙 Thank you for using \033[37;1msetupTermuxArch.sh\033[33;1m to install Arch Linux in Termux.  There are two more things you want to do to complete your installation:\n\n	1) Run \033[37;1mlocale-gen\033[33;1m to generate the en_US.UTF-8 locale.  Edit \033[37;1m/etc/locale.gen \033[33;1mwith \033[37;1mnano\033[33;1m or \033[37;1mvi\033[33;1m specifing your preferred locale and run \033[37;1mlocale-gen\033[33;1m if you want other locales.  \n\n	2) Adjust your \033[37;1m/etc/pacman.d/mirrorlist\033[33;1m file in accordance with your geographic location and use \033[37;1mpacman -Syu\033[33;1m to update your Arch Linux in Termux distribution.  \n\n"
+	printf "\033[33;1m\033[42;1m\n 🕙 Thank you for using \033[37;1msetupTermuxArch.sh\033[33;1m to install Arch Linux in Termux.  There are two more things you want to do to complete your installation:\n\n	1) Run \033[37;1mlocale-gen\033[33;1m to generate the en_US.UTF-8 locale.  Edit \033[37;1m/etc/locale.gen \033[33;1mwith \033[37;1mnano\033[33;1m or \033[37;1mvi\033[33;1m specifing your preferred locale and run \033[37;1mlocale-gen\033[33;1m if you want other locales.  \n\n	2) Adjust your \033[37;1m/etc/pacman.d/mirrorlist\033[33;1m file in accordance with your geographic location. Use \033[37;1mpacman -Syu\033[33;1m to update your Arch Linux in Termux distribution.  \n\n"
 }
 
 printmd5check ()
