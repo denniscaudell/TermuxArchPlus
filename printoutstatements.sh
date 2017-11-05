@@ -1,6 +1,6 @@
 #!/bin/sh -e
 # Copyright 2017 by SDRausty. All rights reserved.
-# See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
+# See https://sdrausty.github.io/TermuxArch/Contributors Thank You! 
 # Website for this project at https://sdrausty.github.io/TermuxArch 
 # 🕐🕜🕑🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕘🕤🕙🕥🕚🕛
 # Printout statement subroutines for `setupTermuxArch.sh`.
@@ -23,7 +23,7 @@ printfooter()
 
 printmd5check ()
 {
-	printf "\033[33;1m\033[43;1m\n 🕠 Checking download integrity with \033[34;1mmd5sum\033[33;1m 🐚  This may take a little while.  \n 🕡 "
+	printf "\033[33;1m\033[43;1m\n 🕠 Checking download integrity with \033[34;1mmd5sum\033[33;1m 🐚  This may take a little while.  \n 🕕 "
 }
 
 printmd5error ()
