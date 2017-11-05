@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 # Copyright 2017 by SDRausty. All rights reserved.
 # See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Website for this project at https://sdrausty.github.io/TermuxArch
@@ -18,22 +18,19 @@ adjustmd5file ()
 
 askuser ()
 {
-	printf "\n\033[32;1m"
+	printf "\n\033[36;1m"
 	while true; do
 	read -p "Are you installing on Android or on a Chromebook? (A|C)?"  ac
-	case $ac in
-	        [Aa]* ) 
-			printf "\nInstalling ${file} for Android. \n\033[0m"
-			armv7lAndroid 
-			break
-			;;
-	        [Cc]* ) 
-			printf "\nInstalling ${file} for Chromebook. \n\033[0m"
-			armv7lChrome 
-			break
-			;;
-	        * ) printf "\nAnswer Android or Chrome (A|C).\n";;
-	esac
+	if [[ $ac = [Aa]* ]];then
+		armv7lAndroid 
+		break
+	elif [[ $ac = [Cc]* ]];then
+		armv7lChrome 
+		break
+	else
+		printf "\nYou answered \033[34;1m$ac\033[36;1m.\n"
+		printf "\nAnswer Android or Chrome (A|C).\n\n"
+	fi
 	done
 }
 
