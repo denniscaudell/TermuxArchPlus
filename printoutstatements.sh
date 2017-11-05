@@ -8,7 +8,7 @@
 
 printdetectedsystem ()
 {
-	printf "\033[36;1m\n 🕜 Detected $(uname -mo) Operating System 🚀  \n"
+	printf "\033[36;1m\n 🕜 Detected $(uname -mo) Operating System.  \n"
 }
 
 printdownloading ()
@@ -43,7 +43,7 @@ printmd5syschkerror ()
 
 printmd5syschksuccess ()
 {
-	printf "\033[36;1m\n 🕐 Installation script integrity OK. Continuing setup 🚀  \n"
+	printf "\033[36;1m\n 🕐 Installation script integrity OK. Continuing setup.  \n"
 }
 
 printmismatch ()
