@@ -8,12 +8,12 @@
 
 printdetectedsystem ()
 {
-	printf "\033[36;1m\n 🕜 Detected $(uname -mo) Operating System.  \n"
+	printf "\033[36;1m\n 🕐 Detected $(uname -mo) Operating System.  \n"
 }
 
 printdownloading ()
 {
-	printf "\033[34;1m\033[44;1m\n 🕑 Now downloading \033[36;1m$file\033[34;1m and the corresponding checksum 🐬  This may take a long time depending on your Internet speed 🚤  Be patient ⛵  If you are going to set your device aside, ensure \033[36;1mtermux-wake-lock\033[34;1m is active to let this process complete.  🏄  \n\n"
+	printf "\033[34;1m\033[44;1m\n 🕜 Now downloading \033[36;1m$file\033[34;1m and the corresponding checksum 🐬  This may take a long time depending on your Internet speed 🚤  Be patient ⛵  If you are going to set your device aside, ensure \033[36;1mtermux-wake-lock\033[34;1m is active to let this process complete.  🏄  \n\n"
 }
 
 printfooter()
