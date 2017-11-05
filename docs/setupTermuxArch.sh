@@ -10,6 +10,7 @@ printf '\033]2;  Thank you for using `setupTermuxArch.sh` 📲 \007'"\n\033[76;1
 
 apt-get -qq update && apt-get -qq upgrade --yes
 apt-get -qq install bsdtar coreutils proot sed termux-exec wget --yes 
+
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/knownconfigurations.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/necessaryfunctions.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/printoutstatements.sh
