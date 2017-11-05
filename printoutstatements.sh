@@ -53,6 +53,6 @@ printmismatch ()
 
 printtail ()
 {
-	printf "\033[33;1m\n 🕛 Use \033[37;1m./arch/$bin\033[33;1m from your \033[37;1m\$HOME\033[33;1m directory to launch Arch Linux in Termux for future sessions.  This can be abbreviated to \033[37;1m\"!.\"\033[33;1m at the bash prompt after starting a session in Termux.  Alternatively copy \033[37;1m$bin\033[33;1m to your \033[37;1m\$PATH\033[33;1m which is \033[37;1m\"$PATH\"\033[33;1m.  \n\nThank you for using \033[37;1msetupTermuxArch.sh\033[33;1m to install Arch Linux in Termux.	🏁  \033[0m\n\n"'\033]2;  Thank you for using `setupTermuxArch.sh` 📲  \007'
+	printf "\033[33;1m\n 🕛 Use \033[37;1m./arch/$bin\033[33;1m from your \033[37;1m\$HOME\033[33;1m directory to launch Arch Linux in Termux for future sessions.  This can be abbreviated to, \033[37;1m\"!.\"\033[33;1m at the bash prompt after starting a session in Termux.  Alternatively copy \033[37;1m$bin\033[33;1m to your \033[37;1m\$PATH\033[33;1m which is, \033[37;1m\"$PATH\"\033[33;1m.  \n\nThank you for using \033[37;1msetupTermuxArch.sh\033[33;1m to install Arch Linux in Termux.	🏁  \033[0m\n\n"'\033]2;  Thank you for using `setupTermuxArch.sh` 📲  \007'
 }
 
