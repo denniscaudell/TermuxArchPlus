@@ -40,9 +40,9 @@ i686 ()
 
 x86_64 ()
 {
-	file=archlinux-bootstrap-2017.10.01-x86_64.tar.gz
+	file=archlinux-bootstrap-2017.11.01-x86_64.tar.gz
 	mirror=mirrors.evowise.com
-	path=/archlinux/iso/2017.10.01/
+	path=/archlinux/iso/latest
 	makesystem 
 }
 
