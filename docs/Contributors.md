@@ -1,15 +1,23 @@
-# -rwxrwx--- [setupTermuxArch.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh)
+##### -rwxrwx--- [knownconfigurations.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/knownconfigurations.sh)
 
-## Contributions have helped in the successful development of this script and project immensely.  The following contributors have helped to refine `setupTermuxArch.sh` 📲 into a mature functional script.  __Thank you for contributing and collaborating!__  
+##### -rwxrwx--- [necessaryfunctions.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/necessaryfunctions.sh)
 
-[@BearChavez](https://github.com/BearChavez) submitted an issue. Result: `setupTermuxArch.sh` improved!
+##### -rwxrwx--- [printoutstatements.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/printoutstatements.sh)
 
-[@developer787](https://github.com/developer787) submitted an issue. Result: `setupTermuxArch.sh` improved! 
+##### -rwxrwx--- [setupTermuxArch.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh)
 
-[@iantothecore](https://github.com/iantothecore) submitted an issue. Result: `setupTermuxArch.sh` improved! 
+## Contributions have helped in the successful development of this script and project immensely.  The following contributors have helped to refine [setupTermuxArch.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh) 📲 __Thank you for contributing and collaborating!__  
 
-[@mjskoneg](https://github.com/mjskoneg) submitted issues. Result: `setupTermuxArch.sh` improved! 
+[@BearChavez](https://github.com/BearChavez) submitted an issue. Result: setupTermuxArch.sh improved!
 
-[@Soph1a7](https://github.com/Soph1a7) contributed to issues and submitted pull requests (locale-gen, printf, quiet, mirror, et al).  Also provided numerous suggestions.  Result: `setupTermuxArch.sh` greatly improved and the repositories and the project enriched! 
+[@developer787](https://github.com/developer787) submitted an issue. Result: setupTermuxArch.sh improved! 
 
-Thanks for making this project work; Please contribute 🔆  See [Notice to Collaborators](Notice_to_Collaborators.md) for more information.  Please see [PRoot](./PRoot) for more information about Linux on device with Termux or visit the [Termux wiki website](https://wiki.termux.com/) for more information.
+[@iantothecore](https://github.com/iantothecore) submitted an issue. Result: setupTermuxArch.sh improved! 
+
+[@mjskoneg](https://github.com/mjskoneg) submitted issues. Result: setupTermuxArch.sh improved! 
+
+[@Neo-Oli](https://github.com/Neo-Oli) suggested `unset LD_PRELOAD` to resolve an issue when using `termux-exec`. Result: setupTermuxArch.sh improved! 
+
+[@Soph1a7](https://github.com/Soph1a7) contributed to issues and submitted pull requests (locale-gen, printf, quiet, mirror, et al added).  Also provided numerous constructive suggestions.  Result: setupTermuxArch.sh greatly improved, and working with this project improved! 
+
+Thank you for making this project work better and please contribute 🔆  See [Notice to Contributors](Notice_to_Contributors) for more information.  Please see [PRoot](https://sdrausty.github.io/TermuxArchPlus/PRoot) for more information about Linux on device with Termux and visit the [Termux wiki website](https://wiki.termux.com/) for more information.

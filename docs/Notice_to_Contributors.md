@@ -1,6 +1,6 @@
 # -rwxrwx--- [setupTermuxArch.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh)
 
-## Notice to Collaborators
+## Notice to Contributors
 
 __Source code goals for this project are:__
 1. That it work as desired and provide the ultimate user experience possible when executed, 

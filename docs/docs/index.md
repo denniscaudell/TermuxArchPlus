@@ -1,0 +1,1 @@
+Placeholder for TermuxArch documentation

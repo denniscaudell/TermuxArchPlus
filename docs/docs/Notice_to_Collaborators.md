@@ -18,7 +18,7 @@ Additional information:
 * All Termux Arch related issues and pull requests should be addressed through [https://github.com/sdrausty/TermuxArch](https://github.com/sdrausty/TermuxArch) for script changes,
 * All Termux Arch related issues and pull requests should be delivered through [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus) for documentation, graphics and other presentation medium.
 
-__To avoid "git bloat", this repository is reset periodically!__  If you get a `fatal: refusing to merge unrelated histories` message while working with your current clone, save the important work from your current clone and clone again.
+__To avoid "git bloat", this repository is reset periodically!__  If you get a `fatal: refusing to merge unrelated histories` message while working with `git`, save the work from your current clone, and re-clone this project.
 
 To understand more about "git bloat", run `du -hs .git` on older more mature projects.  Some might have a very large .git directory.  A very large .git directory can impede working with a git repository, especially when utilizing a slow Internet connection. This is why this repository is periodically reset.  
 
