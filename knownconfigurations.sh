@@ -36,8 +36,6 @@ armv8l ()
 	mirror=os.archlinuxarm.org
 	path=/os/
 	makesystem 
-	#printf "See https://plus.google.com/112476373588507941507/posts/15PgKMeHxE3 for additional information.  \n"
-	makesystem 
 }
 
 i686 ()

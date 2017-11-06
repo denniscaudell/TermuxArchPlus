@@ -2,7 +2,7 @@
 # Website for this project at https://sdrausty.github.io/TermuxArch 
 # See https://sdrausty.github.io/TermuxArch/Contributors Thank You! 
 # Copyright 2017 by SDRausty. All rights reserved.
-# 🕐🕜🕑🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕘🕤🕙🕥🕚🕛
+# 🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛
 # Printout statement subroutines for `setupTermuxArch.sh`.
 ################################################################################
 

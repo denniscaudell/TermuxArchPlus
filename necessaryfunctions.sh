@@ -74,8 +74,8 @@ detectsystem2 ()
 integratycheck ()
 {
 	if md5sum -c termuxarchchecksum.md5; then
-		printmd5syschksuccess 
 		rmfiles 
+		printmd5syschksuccess 
 	else
 		rmfiles 
 		printmd5syschkerror
