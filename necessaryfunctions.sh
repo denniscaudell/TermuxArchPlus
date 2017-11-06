@@ -50,7 +50,7 @@ detectsystem ()
 	elif [ "$(uname -m)" = "armv7l" ];then
 		detectsystem2 
 	elif [ "$(uname -m)" = "armv8l" ];then
-		printmismatch 
+		armv8l
 	elif [ "$(uname -m)" = "i686" ];then
 		i686 
 	elif [ "$(uname -m)" = "x86_64" ];then
@@ -77,9 +77,8 @@ integratycheck ()
 		printmd5syschksuccess 
 		rmfiles 
 	else
-		printmd5syschkerror
 		rmfiles 
-	exit 
+		printmd5syschkerror
 	fi
 }
 
@@ -114,9 +113,8 @@ makesystem ()
 		printmd5success
 		proot --link2symlink bsdtar -xpf $file 2>/dev/null||:
 	else
-		printmd5error
 		rm -rf $HOME/arch
-	exit 
+		printmd5error
 	fi
 	rm *.tar.gz *.tar.gz.md5
 	prepbin 

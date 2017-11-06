@@ -30,6 +30,15 @@ armv7lChrome ()
 	makesystem 
 }
 
+armv8l ()
+{
+	file=unknown.tar.gz
+	mirror=unkowb.org
+	path=/unkown/
+	printf "See https://plus.google.com/112476373588507941507/posts/15PgKMeHxE3 for additional information.  \n"
+	printmismatch 
+}
+
 i686 ()
 {
 	file=archlinux-bootstrap-2017.03.01-i686.tar.gz

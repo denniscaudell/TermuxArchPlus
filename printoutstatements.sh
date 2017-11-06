@@ -29,6 +29,7 @@ printmd5check ()
 printmd5error ()
 {
 	printf "\033[07;1m\033[31;1m\n 🔆 ERROR md5sum mismatch! The download was corrupt! Removing failed download.\033[33;1m  Run setupTermuxArch.sh again!  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  This kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended. There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way it means this download was corrupt.  If this keeps repeating, please change your mirror with an editor like vi in \033[37;1mknownconfigurations.sh\033[33;1m.  See https://sdrausty.github.io/TermuxArchPlus/mirrors for more information.  \n\n	Run setupTermuxArch.sh again. \033[31;1mExiting...  \033[0m\n"
+		exit 
 }
 
 printmd5success ()
@@ -39,6 +40,7 @@ printmd5success ()
 printmd5syschkerror ()
 {
 	printf "\033[07;1m\033[31;1m\n 🔆 ERROR md5sum mismatch!  Setup initialization mismatch!\033[33;1m  Update your copy of setupTermuxArch.sh.  If you have updated it, this kind of error can go away, sort of like magic.  Waiting a few minutes before executing again is recommended, especially if you are using a new copy from https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh on your system.  There are many reasons that generate checksum errors.  Proxies are one reason.  Mirroring and mirrors are another explaination for md5sum errors.  Either way this means,  \"Try again, initialization was not successful.\"  See https://sdrausty.github.io/TermuxArchPlus/md5sums for more information.  \n\n	Run setupTermuxArch.sh again. \033[31;1mExiting...  \033[0m\n"
+		exit 
 }
 
 printmd5syschksuccess ()
@@ -49,6 +51,7 @@ printmd5syschksuccess ()
 printmismatch ()
 {
 	printf "\033[07;1m\033[31;1m\n 🔆 ERROR Unknown configuration!  Did not find an architecture and operating system match in\033[37;1m knownconfigurations.sh\033[31;1m!  \033[33;1mDetected $(uname -mo).  There still is hope.  Check at http://mirror.archlinuxarm.org/os/ and https://www.archlinux.org/mirrors/ for other available images and see if any match your device.  If you find a match, then please \033[37;1msubmit a pull request\033[33;1m at https://github.com/sdrausty/TermuxArch/pulls with script modifications.  Alternatively, \033[37;1msubmit a modification request\033[33;1m at https://github.com/sdrausty/TermuxArch/issues if you find a configuration match.  Please include output from \033[37;1muname -mo\033[33;1m on the device in order to expand autodetection for \033[37;1msetupTermuxArch.sh\033[33;1m.  See https://sdrausty.github.io/TermuxArchPlus/Known_Configurations for more information.  \n\n	\033[0m\033[33;1mRun setupTermuxArch.sh again. \033[31;1mExiting...  \033[0m\n"
+		exit 
 }
 
 printtail ()
