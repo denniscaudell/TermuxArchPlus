@@ -21,7 +21,7 @@ wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch
 . ./printoutstatements.sh
 
 # Main Block
-detectsystem 
+callsystem 
 $HOME/arch/$bin ||:
 printtail
 exit 
