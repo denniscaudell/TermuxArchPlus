@@ -8,22 +8,22 @@
 
 printdetectedsystem ()
 {
-	printf "\033[32;1m\n 🕜 Detected $(uname -mo) Operating System.  \n"
+	printf "\033[10;1m\n 🕜 Detected $(uname -mo) Operating System.  \n"
 }
 
 printdownloading ()
 {
-	printf "\033[32;1m\n 🕑 Now downloading \033[33;1m$file\033[32;1m and the corresponding checksum.  This may take a long time depending on your Internet speed.  Be patient.  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[32;1m is active to let this process complete.  \n\n"
+	printf "\033[10;1m\n 🕑 Now downloading \033[33;1m$file\033[10;1m and the corresponding checksum.  This may take a long time depending on your Internet speed.  Be patient.  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[10;1m is active to let this process complete.  \n\n"
 }
 
 printfooter()
 {
-	printf "\033[32;1m\n 🕙 Thank you for using \033[37;1msetupTermuxArch.sh\033[32;1m to install Arch Linux in Termux.  There are two more things you want to do to complete your installation:\n\n	1) Run \033[37;1mlocale-gen\033[32;1m to generate the en_US.UTF-8 locale.  Edit \033[37;1m/etc/locale.gen \033[32;1mwith \033[37;1mnano\033[32;1m or \033[37;1mvi\033[32;1m specifing your preferred locale and run \033[37;1mlocale-gen\033[32;1m if you want other locales.  \n\n	2) Adjust your \033[37;1m/etc/pacman.d/mirrorlist\033[32;1m file in accordance with your geographic location. Use \033[37;1mpacman -Syu\033[32;1m to update your Arch Linux in Termux distribution.  \n\n"
+	printf "\033[10;1m\n 🕙 Thank you for using \033[37;1msetupTermuxArch.sh\033[10;1m to install Arch Linux in Termux.  There are two more things you want to do to complete your installation:\n\n	1) Run \033[37;1mlocale-gen\033[10;1m to generate the en_US.UTF-8 locale.  Edit \033[37;1m/etc/locale.gen \033[10;1mwith \033[37;1mnano\033[10;1m or \033[37;1mvi\033[10;1m specifing your preferred locale and run \033[37;1mlocale-gen\033[10;1m if you want other locales.  \n\n	2) Adjust your \033[37;1m/etc/pacman.d/mirrorlist\033[10;1m file in accordance with your geographic location. Use \033[37;1mpacman -Syu\033[10;1m to update your Arch Linux in Termux distribution.  \n\n"
 }
 
 printmd5check ()
 {
-	printf "\033[32;1m\n 🕠 Checking download integrity with \033[33;1mmd5sum\033[32;1m.  This may take a little while.  \n\n 🕕 "
+	printf "\033[10;1m\n 🕠 Checking download integrity with \033[33;1mmd5sum\033[10;1m.  This may take a little while.  \n\n 🕕 "
 }
 
 printmd5error ()
@@ -33,7 +33,7 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[32;1m\n 🕖 Now uncompressing \033[33;1m$file\033[32;1m.  \033[37;1mThis will take much longer!  Be patient.\033[32;1m  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[32;1m is active to let this process complete.  \n"
+	printf "\033[10;1m\n 🕖 Now uncompressing \033[33;1m$file\033[10;1m.  \033[37;1mThis will take much longer!  Be patient.\033[10;1m  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[10;1m is active to let this process complete.  \n"
 }
 
 printmd5syschkerror ()
@@ -43,7 +43,7 @@ printmd5syschkerror ()
 
 printmd5syschksuccess ()
 {
-	printf "\033[32;1m\n 🕐 Installation script integrity: OK  \n"
+	printf "\033[10;1m\n 🕐 Installation script integrity: OK  \n"
 }
 
 printmismatch ()
@@ -53,6 +53,6 @@ printmismatch ()
 
 printtail ()
 {
-	printf "\033[32;1m\n 🕛 Use \033[37;1m./arch/$bin\033[32;1m from your \033[37;1m\$HOME\033[32;1m directory to launch Arch Linux in Termux for future sessions.  This can be abbreviated to, \033[37;1m\"!.\"\033[32;1m at the bash prompt after starting a session in Termux.  Alternatively copy \033[37;1m$bin\033[32;1m to your \033[37;1m\$PATH\033[32;1m which is, \033[37;1m\"$PATH\"\033[32;1m.  \n\nThank you for using \033[37;1msetupTermuxArch.sh\033[32;1m to install Arch Linux in Termux.	🏁  \033[0m\n\n"'\033]2;  Thank you for using `setupTermuxArch.sh` 📲  \007'
+	printf "\033[10;1m\n 🕛 Use \033[37;1m./arch/$bin\033[10;1m from your \033[37;1m\$HOME\033[10;1m directory to launch Arch Linux in Termux for future sessions.  This can be abbreviated to, \033[37;1m\"!.\"\033[10;1m at the bash prompt after starting a session in Termux.  Alternatively copy \033[37;1m$bin\033[10;1m to your \033[37;1m\$PATH\033[10;1m which is, \033[37;1m\"$PATH\"\033[10;1m.  \n\nThank you for using \033[37;1msetupTermuxArch.sh\033[10;1m to install Arch Linux in Termux.	🏁  \033[0m\n\n"'\033]2;  Thank you for using `setupTermuxArch.sh` 📲  \007'
 }
 
