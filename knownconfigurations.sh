@@ -32,11 +32,12 @@ armv7lChrome ()
 
 armv8l ()
 {
-	file=unknown.tar.gz
-	mirror=unkowb.org
-	path=/unkown/
-	printf "See https://plus.google.com/112476373588507941507/posts/15PgKMeHxE3 for additional information.  \n"
-	printmismatch 
+	file=ArchLinuxARM-aarch64-latest.tar.gz
+	mirror=os.archlinuxarm.org
+	path=/os/
+	makesystem 
+	#printf "See https://plus.google.com/112476373588507941507/posts/15PgKMeHxE3 for additional information.  \n"
+	makesystem 
 }
 
 i686 ()
