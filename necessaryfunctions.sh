@@ -2,6 +2,7 @@
 # Website for this project at https://sdrausty.github.io/TermuxArch
 # See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Copyright 2017 by SDRausty. All rights reserved.
+# wget -A tar.gz -m -nd -np http://mirrors.evowise.com/archlinux/iso/latest/
 ################################################################################
 
 adjustmd5file ()
