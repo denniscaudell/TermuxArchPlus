@@ -13,7 +13,7 @@ printdetectedsystem ()
 
 printdownloading ()
 {
-	printf "\033[10;1m\n 🕑 Now downloading \033[33;1m$file\033[10;1m and the corresponding checksum.  This may take a long time depending on your Internet speed.  Be patient.  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[10;1m is active to let this process complete.  \n\n"
+	printf "\033[10;1m\n 🕑 Now downloading \033[33;1m$file\033[0m and the corresponding checksum.  This may take a long time depending on your Internet speed.  Be patient.  If you are going to set your device aside, ensure \033[33;1mtermux-wake-lock\033[10;1m is active to let this process complete.  \n\n"
 }
 
 printfooter()
