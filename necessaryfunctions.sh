@@ -1,8 +1,7 @@
 #!/bin/bash -e
-# See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Website for this project at https://sdrausty.github.io/TermuxArch
+# See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Copyright 2017 by SDRausty. All rights reserved.
-# add submodules media docs
 ################################################################################
 
 adjustmd5file ()
@@ -34,28 +33,23 @@ askuser ()
 	done
 }
 
-integratycheck ()
-{
-	if md5sum -c termuxarchchecksum.md5; then
-		printmd5syschksuccess 
-		rmfiles 
-	else
-		printmd5syschkerror
-		rmfiles 
-	exit 
-	fi
-}
-
-detectsystem ()
+callsystem ()
 {
 	integratycheck 
 	mkdir -p $HOME/arch
 	cd $HOME/arch
+	detectsystem
+}
+
+detectsystem ()
+{
 	printdetectedsystem
 	if [ "$(uname -m)" = "aarch64" ];then
 		aarch64
 	elif [ "$(uname -m)" = "armv7l" ];then
 		detectsystem2 
+	elif [ "$(uname -m)" = "armv8l" ];then
+		printmismatch 
 	elif [ "$(uname -m)" = "i686" ];then
 		i686 
 	elif [ "$(uname -m)" = "x86_64" ];then
@@ -73,6 +67,18 @@ detectsystem2 ()
 		askuser 
 	else
 		printmismatch 
+	fi
+}
+
+integratycheck ()
+{
+	if md5sum -c termuxarchchecksum.md5; then
+		printmd5syschksuccess 
+		rmfiles 
+	else
+		printmd5syschkerror
+		rmfiles 
+	exit 
 	fi
 }
 
