@@ -11,6 +11,8 @@ printf '\033]2;  Thank you for using `setupTermuxArch.sh` 📲 \007'"\n\033[10m 
 apt-get -qq update && apt-get -qq upgrade --yes
 apt-get -qq install bsdtar proot termux-exec wget --yes 
 
+depend ()
+{
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/knownconfigurations.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/necessaryfunctions.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/printoutstatements.sh
@@ -19,8 +21,10 @@ wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch
 . ./knownconfigurations.sh
 . ./necessaryfunctions.sh
 . ./printoutstatements.sh
+}
 
 # Main Block
+depend 
 callsystem 
 $HOME/arch/$bin ||:
 printtail
