@@ -117,7 +117,6 @@ makesystem ()
 		printmd5error
 	fi
 	rm $HOME/arch/*.tar.gz $HOME/arch/*.tar.gz.md5
-	prepbin 
 	printfooter
 }
 
