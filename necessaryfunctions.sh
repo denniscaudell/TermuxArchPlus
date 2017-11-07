@@ -70,6 +70,13 @@ detectsystem2 ()
 	fi
 }
 
+getimage ()
+{
+	# Get latest image for x86_64. This wants refinement. Continue does not work. 
+	# wget -A tar.gz -m -nd -np http://mirrors.evowise.com/archlinux/iso/latest/
+	wget -q -c --show-progress http://$mirror$path$file
+}
+
 integratycheck ()
 {
 	if md5sum -c termuxarchchecksum.md5; then
@@ -99,15 +106,14 @@ makebin ()
 	en_US.UTF-8 UTF-8 
 	EOM
 	cp $HOME/.bash* root/ 
+	# add cp ~/bin if exists
 }
 
 makesystem ()
 {
 	printdownloading 
 	adjustmd5file 
-	wget -q -c --show-progress http://$mirror$path$file
-	# Get latest image for x86_64. This wants refinement. Continue does not work. 
-	# wget -A tar.gz -m -nd -np http://mirrors.evowise.com/archlinux/iso/latest/
+	getimage
 	printmd5check
 	if md5sum -c $file.md5; then
 		printmd5success
@@ -116,7 +122,7 @@ makesystem ()
 		rm -rf $HOME/arch
 		printmd5error
 	fi
-	rm $HOME/arch/*.tar.gz $HOME/arch/*.tar.gz.md5
+	rm *.tar.gz *.tar.gz.md5
 	printfooter
 }
 
