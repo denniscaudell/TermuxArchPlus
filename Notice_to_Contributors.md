@@ -8,7 +8,7 @@ __Source code goals for this project are:__
 
 Contributions have helped in the successful development of this script and project immensely.  Understanding the goals and workings of this project shall make interacting with this project all the more rewarding.  If you are considering collaborating, help is wanted in:
 1. Coding - Submit modifications in the root directory at [https://github.com/sdrausty/TermuxArch](https://github.com/sdrausty/TermuxArch)
-2. Documentation - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArch)
+2. Documentation - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus)
 3. Screenshots - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus)
 4. Animation - Submit modifications in the docs directory at [https://github.com/sdrausty/TermuxArchPlus](https://github.com/sdrausty/TermuxArchPlus)
 
@@ -26,4 +26,4 @@ To understand more about "git bloat", run `du -hs .git` on older more mature pro
 
 * Pull requests are welcome [https://github.com/sdrausty/TermuxArch/pulls](https://github.com/sdrausty/TermuxArch/pulls) ✍
 
-Thanks for making this project work; Please contribute 🔆  See [contributors](./Contributors.md).  See [PRoot](./PRoot) for more information about Linux on device with Termux and visit the [Termux wiki website](https://wiki.termux.com/) for more information.
+Thanks for making this project work; Please contribute 🔆  See [contributors](./Contributors.md).  See [PRoot](./docs/PRoot) for more information about Linux on device with Termux and visit the [Termux wiki website](https://wiki.termux.com/) for more information.
