@@ -2,7 +2,6 @@
 # Website for this project at https://sdrausty.github.io/TermuxArch
 # See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Copyright 2017 by SDRausty. All rights reserved.
-# wget -A tar.gz -m -nd -np http://mirrors.evowise.com/archlinux/iso/latest/
 ################################################################################
 
 adjustmd5file ()
@@ -84,13 +83,13 @@ integratycheck ()
 
 makebin ()
 {
+	bin=startArch.sh
 	cat > $bin <<- EOM
 	#!/data/data/com.termux/files/usr/bin/sh -e
 	unset LD_PRELOAD
-	exec proot --link2symlink -0 -r $HOME/arch/$sysp -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
+	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
 	EOM
 	chmod 700 $bin
-	cd  $HOME/arch/$sysp
 	rm etc/resolv* 2>/dev/null||:
 	cat > etc/resolv.conf <<- EOM
 	nameserver 8.8.8.8
@@ -100,7 +99,6 @@ makebin ()
 	en_US.UTF-8 UTF-8 
 	EOM
 	cp $HOME/.bash* root/ 
-	cd  $HOME/arch/
 }
 
 makesystem ()
@@ -108,10 +106,12 @@ makesystem ()
 	printdownloading 
 	adjustmd5file 
 	wget -q -c --show-progress http://$mirror$path$file
+	# Get latest image for x86_64. This wants refinement. Continue does not work. 
+	# wget -A tar.gz -m -nd -np http://mirrors.evowise.com/archlinux/iso/latest/
 	printmd5check
 	if md5sum -c $file.md5; then
 		printmd5success
-		proot --link2symlink bsdtar -xpf $file 2>/dev/null||:
+		preproot 
 	else
 		rm -rf $HOME/arch
 		printmd5error
@@ -121,18 +121,12 @@ makesystem ()
 	printfooter
 }
 
-prepbin ()
+preproot ()
 {
-	bin=startArch.sh
-	if [ "$(uname -m)" = "i686" ];then
-		sysp=root.i686 
-		makebin
-	elif [ "$(uname -m)" = "x86_64" ];then
-		sysp=root.x86_64
-		makebin
+	if [ "$(uname -m)" = "x86_64" ] || [ "$(uname -m)" = "i686" ];then
+		proot --link2symlink bsdtar -xpf --strip-components 1 $file 2>/dev/null||:
 	else
-		sysp=""
-		makebin
+		proot --link2symlink bsdtar -xpf $file 2>/dev/null||:
 	fi
 }
 
