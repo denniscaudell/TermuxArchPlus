@@ -2,6 +2,7 @@
 # Website for this project at https://sdrausty.github.io/TermuxArch
 # See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Copyright 2017 by SDRausty. All rights reserved.
+# $ while true ;do play-audio NEIL\ YOUNG\ -\ OLD\ MAN-An2a1_Do_fc.webm ;done
 ################################################################################
 
 adjustmd5file ()
@@ -74,6 +75,7 @@ getimage ()
 {
 	# Get latest image for x86_64. This wants refinement. Continue does not work. 
 	# wget -A tar.gz -m -nd -np http://mirrors.evowise.com/archlinux/iso/latest/
+	# wget -A tar.gz -m -nd -np http://$mirror$path
 	wget -q -c --show-progress http://$mirror$path$file
 }
 
@@ -102,11 +104,14 @@ makebin ()
 	nameserver 8.8.8.8
 	nameserver 8.8.4.4
 	EOM
+	# sed tweek wanted to preserve original locale.gen.
 	cat >  etc/locale.gen <<- EOM
 	en_US.UTF-8 UTF-8 
 	EOM
-	cp $HOME/.bash* root/ 
-	# add cp ~/bin if exists
+	cp $HOME/.bash* root/ ||: 
+	if [ ! -d "$HOME/bin" ]; then
+	cp -r $HOME/bin root
+	fi
 }
 
 makesystem ()
@@ -123,6 +128,7 @@ makesystem ()
 		printmd5error
 	fi
 	rm *.tar.gz *.tar.gz.md5
+	makebin 
 	printfooter
 }
 
