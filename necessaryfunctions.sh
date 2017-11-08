@@ -164,5 +164,6 @@ rmfiles ()
 	rm ./knownconfigurations.sh
 	rm ./necessaryfunctions.sh
 	rm ./printoutstatements.sh
+	rm ./systemconfigs.sh
 }
 

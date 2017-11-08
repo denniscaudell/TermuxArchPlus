@@ -16,10 +16,12 @@ wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/necessaryfunctions.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/printoutstatements.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh
+wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/systemconfigs.sh
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/termuxarchchecksum.md5
 . ./knownconfigurations.sh
 . ./necessaryfunctions.sh
 . ./printoutstatements.sh
+. ./systemconfigs.sh
 }
 
 # Main Block
