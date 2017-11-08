@@ -126,7 +126,7 @@ touchupsys ()
 	else
 		touch root/.bash_profile 
 	fi
-	echo ". bashrc" >> root/.bash_profile
+	echo ". .bashrc" >> root/.bash_profile
 	if [ -d "$HOME/bin" ]; then
 		cp -r $HOME/bin root 2>/dev/null||:
 	fi
