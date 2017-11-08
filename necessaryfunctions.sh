@@ -99,18 +99,36 @@ makebin ()
 	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
 	EOM
 	chmod 700 $bin
+	touchupsys 
+}
+
+touchupsys ()
+{
 	rm etc/resolv* 2>/dev/null||:
 	cat > etc/resolv.conf <<- EOM
 	nameserver 8.8.8.8
 	nameserver 8.8.4.4
 	EOM
-	# sed tweek wanted to preserve original locale.gen.
-	cat >  etc/locale.gen <<- EOM
-	en_US.UTF-8 UTF-8 
-	EOM
-	cp $HOME/.bash* root/ ||: 
+	if [ -f "etc/locale.gen" ]; then
+		sed -i '/en_US.UTF-8 UTF-8/{s/#//g;s/@/-at-/g;}' etc/locale.gen 
+	else
+		cat >  etc/locale.gen <<- EOM
+		en_US.UTF-8 UTF-8 
+		EOM
+	fi
+	if [ -f "$HOME/.bashrc" ]; then
+		cp $HOME/.bashrc root/ 
+	else
+		touch root/.bashrc 
+	fi
+	if [ -f "$HOME/.bash_profile" ]; then
+		cp $HOME/.bash_profile root/ 
+	else
+		touch root/.bash_profile 
+	fi
+	echo ". bashrc" >> root/.bash_profile
 	if [ -d "$HOME/bin" ]; then
-	cp -r $HOME/bin root
+		cp -r $HOME/bin root 2>/dev/null||:
 	fi
 }
 
