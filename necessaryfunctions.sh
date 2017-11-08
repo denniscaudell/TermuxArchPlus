@@ -2,7 +2,6 @@
 # Website for this project at https://sdrausty.github.io/TermuxArch
 # See https://sdrausty.github.io/TermuxArch/Contributors Thank You 
 # Copyright 2017 by SDRausty. All rights reserved.
-# $ while true ;do play-audio NEIL\ YOUNG\ -\ OLD\ MAN-An2a1_Do_fc.webm ;done
 ################################################################################
 
 adjustmd5file ()
