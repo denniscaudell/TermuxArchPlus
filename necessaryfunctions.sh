@@ -110,7 +110,7 @@ touchupsys ()
 	nameserver 8.8.4.4
 	EOM
 	if [ -f "etc/locale.gen" ]; then
-		sed -i '/en_US.UTF-8 UTF-8/{s/#//g;s/@/-at-/g;}' etc/locale.gen 
+		sed -i '/\#en_US.UTF-8 UTF-8/{s/#//g;s/@/-at-/g;}' etc/locale.gen 
 	else
 		cat >  etc/locale.gen <<- EOM
 		en_US.UTF-8 UTF-8 
