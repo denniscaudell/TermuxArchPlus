@@ -40,6 +40,7 @@ armv8l ()
 
 i686 ()
 {
+	# i686 is frozen at this release. See https://www.archlinux.org/news/phasing-out-i686-support/
 	file=archlinux-bootstrap-2017.03.01-i686.tar.gz
 	mirror=archive.archlinux.org
 	path=/iso/2017.03.01/
@@ -48,6 +49,7 @@ i686 ()
 
 x86_64 ()
 {
+	# Wants to download latest file..
 	file=archlinux-bootstrap-2017.11.01-x86_64.tar.gz
 	mirror=mirrors.evowise.com
 	path=/archlinux/iso/latest

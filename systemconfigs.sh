@@ -35,9 +35,7 @@ bashrc ()
 
 bash_profile ()
 {
-	cat > root/.bash_profile <<- EOM
-	PATH=$PATH:$HOME/bin
-	EOM
+	touch root/.bash_profile 
 }
 
 finishsetup ()
