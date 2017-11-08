@@ -47,7 +47,10 @@ copystart2path ()
 	read -p "Copy $bin to your \$PATH? [y|n]" answer
 	if [[ $answer = y ]] ; then
 		cp $HOME/arch/$bin $PREFIX/bin
-		printf "\n 🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m.  "
+		printf "\n 🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m."
+	elif
+		printf "\n 🕛 "
+
 	fi
 }
 
