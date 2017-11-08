@@ -7,7 +7,7 @@
 startbin ()
 {
 	cat > $bin <<- EOM
-	#!/bin/sh -e
+	#!/data/data/com.termux/files/usr/bin/sh -e
 	unset LD_PRELOAD
 	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
 	EOM
