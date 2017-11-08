@@ -6,6 +6,8 @@
 
 ##### -rwxrwx--- [setupTermuxArch.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh)
 
+##### -rwxrwx--- [systemconfigs.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/systemconfigs.sh)
+
 ## Contributions have helped in the successful development of this script and project immensely.  The following contributors have helped to refine [setupTermuxArch.sh](https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh) 📲 __Thank you for contributing and collaborating!__  
 
 [@BearChavez](https://github.com/BearChavez) submitted an issue. Result: setupTermuxArch.sh improved!
