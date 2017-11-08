@@ -46,7 +46,7 @@ copystart2path ()
 read -p "Copy $bin to your \$PATH? [yn]" answer
 if [[ $answer = y ]] ; then
   cp $HOME/arch/$bin $PREFIX/bin
-  printf " $bin copied to $PREFIX/bin"
+  printf "$bin copied to $PREFIX/bin."
 fi
 }
 
@@ -157,7 +157,7 @@ touchupsys ()
 	else
 		bash_profile 
 	fi
-	echo ". .bashrc" >> root/.bash_profile
+	echo ". $HOME/.bashrc" >> root/.bash_profile
 	if [ -d "$HOME/bin" ]; then
 		cp -r $HOME/bin root 2>/dev/null||:
 	else
