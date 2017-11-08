@@ -48,7 +48,7 @@ copybin2path ()
 	read -p "Copy $bin to your \$PATH? [y|n]" answer
 	if [[ $answer = [Yy]* ]];then
 		cp $HOME/arch/$bin $PREFIX/bin
-		printf "\n 🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m."
+		printf "\n 🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m.  "
 		break
 	elif [[ $answer = [Nn]* ]];then
 		printf "\n 🕛 "
@@ -92,6 +92,7 @@ detectsystem2 ()
 getimage ()
 {
 	# Get latest image for x86_64. This wants refinement. Continue does not work. 
+	# https://stackoverflow.com/questions/15040132/how-to-wget-the-more-recent-file-of-a-directory
 	# wget -A tar.gz -m -nd -np http://mirrors.evowise.com/archlinux/iso/latest/
 	# wget -A tar.gz -m -nd -np http://$mirror$path
 	wget -q -c --show-progress http://$mirror$path$file
