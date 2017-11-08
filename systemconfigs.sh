@@ -45,22 +45,22 @@ finishsetup ()
 	printf "\n\033[32;1m"
 	while true; do
 	read -p "Would you like to use nano or vi? (n|v)?"  nv
-	if [[ $nv = [Nn]* ]];then
+	if [[ \$nv = [Nn]* ]];then
 		ed=nano
 		break
-	elif [[ $nv = [Vv]* ]];then
+	elif [[ \$nv = [Vv]* ]];then
 		ed=vi
 		break
 	else
-		printf "\nYou answered \033[34;1m$nv\033[32;1m.\n"
+		printf "\nYou answered \033[34;1m\$nv\033[32;1m.\n"
 		printf "\nAnswer nano or vi (n|v).\n\n"
 	fi
 	done
-	$ed /etc/locale.gen
+	\$ed /etc/locale.gen
 	locale-gen
-	$ed /etc/pacman.d/mirrorlist
+	\$ed /etc/pacman.d/mirrorlist
 	pacman -Syu
-	printf "Use exit to conclude the installation.\033[0m\n"
+	printf "\nUse exit to conclude the installation.\033[0m\n"
 	EOM
 	chmod 700 root/bin/finishsetup.sh 
 }
