@@ -60,7 +60,7 @@ finishsetup ()
 	locale-gen
 	\$ed /etc/pacman.d/mirrorlist
 	pacman -Syu
-	printf "\nUse exit to conclude the installation.\033[0m\n"
+	printf "\nUse \033[34;1mexit\033[32;1m to conclude this installation.\033[0m\n\n"
 	EOM
 	chmod 700 root/bin/finishsetup.sh 
 }

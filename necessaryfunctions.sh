@@ -41,9 +41,10 @@ callsystem ()
 	detectsystem
 }
 
-copystart2path ()
+copybin2path ()
 {
 	printf " 🕦 "
+	while true; do
 	read -p "Copy $bin to your \$PATH? [y|n]" answer
 	if [[ $answer = [Yy]* ]] ; then
 		cp $HOME/arch/$bin $PREFIX/bin
