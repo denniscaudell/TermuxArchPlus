@@ -109,7 +109,7 @@ makebin ()
 	en_US.UTF-8 UTF-8 
 	EOM
 	cp $HOME/.bash* root/ ||: 
-	if [ ! -d "$HOME/bin" ]; then
+	if [ -d "$HOME/bin" ]; then
 	cp -r $HOME/bin root
 	fi
 }
