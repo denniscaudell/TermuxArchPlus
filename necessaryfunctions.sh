@@ -41,6 +41,15 @@ callsystem ()
 	detectsystem
 }
 
+copystart2path ()
+{
+read -p "Copy $bin to your \$PATH? [yn]" answer
+if [[ $answer = y ]] ; then
+  cp $HOME/arch/$bin $PREFIX/bin
+  printf " $bin copied to $PREFIX/bin"
+fi
+}
+
 detectsystem ()
 {
 	printdetectedsystem
@@ -96,6 +105,34 @@ makebin ()
 	touchupsys 
 }
 
+makesystem ()
+{
+	printdownloading 
+	adjustmd5file 
+	getimage
+	printmd5check
+	if md5sum -c $file.md5; then
+		printmd5success
+		preproot 
+	else
+		rm -rf $HOME/arch
+		printmd5error
+	fi
+	rm *.tar.gz *.tar.gz.md5
+	makebin 
+	printfooter
+	copystart2path 
+}
+
+preproot ()
+{
+	if [ "$(uname -m)" = "x86_64" ] || [ "$(uname -m)" = "i686" ];then
+		proot --link2symlink bsdtar -xpf --strip-components 1 $file 2>/dev/null||:
+	else
+		proot --link2symlink bsdtar -xpf $file 2>/dev/null||:
+	fi
+}
+
 touchupsys ()
 {
 	rm etc/resolv* 2>/dev/null||:
@@ -127,33 +164,6 @@ touchupsys ()
 		mkdir -p root/bin
 	fi
 	finishsetup
-}
-
-makesystem ()
-{
-	printdownloading 
-	adjustmd5file 
-	getimage
-	printmd5check
-	if md5sum -c $file.md5; then
-		printmd5success
-		preproot 
-	else
-		rm -rf $HOME/arch
-		printmd5error
-	fi
-	rm *.tar.gz *.tar.gz.md5
-	makebin 
-	printfooter
-}
-
-preproot ()
-{
-	if [ "$(uname -m)" = "x86_64" ] || [ "$(uname -m)" = "i686" ];then
-		proot --link2symlink bsdtar -xpf --strip-components 1 $file 2>/dev/null||:
-	else
-		proot --link2symlink bsdtar -xpf $file 2>/dev/null||:
-	fi
 }
 
 rmfiles ()
