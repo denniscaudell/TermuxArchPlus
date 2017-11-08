@@ -17,14 +17,14 @@ startbin ()
 bashrc ()
 {
 	cat > root/.bashrc <<- EOM
+	alias c='cd .. && pwd'
 	alias ..="cd ../.. && pwd"
 	alias ...="cd ../../.. && pwd"
 	alias ....="cd ../../../.. && pwd"
 	alias .....="cd ../../../../.. && pwd"
-	alias c='cd .. && pwd'
-	alias cdd='cd /sdcard/Download/ && pwd'
 	alias e='exit'
-	alias h='history >> ~/.historyFile'
+	alias d='du -hs'
+	alias h='history >> ~/.historyfile'
 	alias j='jobs'
 	alias l='ls -al'
 	alias p='pwd'
@@ -64,3 +64,4 @@ finishsetup ()
 	EOM
 	chmod 700 root/bin/finishsetup.sh 
 }
+
