@@ -43,7 +43,7 @@ bash_profile ()
 finishsetup ()
 {
 	cat > root/bin/finishsetup.sh  <<- EOM
-	#!/bin/sh -e
+	#!/bin/sh 
 	vi /etc/pacman.d/mirrorlist
 	pacman -Syu
 	vi /etc/locale.gen
