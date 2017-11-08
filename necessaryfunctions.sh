@@ -53,7 +53,7 @@ copystart2path ()
 		printf "\n\n 🕛 "
 		break
 	else
-		printf "\nYou answered \033[34;1m$answer\033[36;1m.\n"
+		printf "\nYou answered \033[33;1m$answer\033[0m.\n"
 		printf "\nAnswer Yes or No (y|n).\n\n"
 	fi
 }
