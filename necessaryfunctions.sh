@@ -43,11 +43,11 @@ callsystem ()
 
 copystart2path ()
 {
-read -p "Copy $bin to your \$PATH? [yn]" answer
-if [[ $answer = y ]] ; then
-  cp $HOME/arch/$bin $PREFIX/bin
-  printf "\033[32;1m$bin\033[0m copied to \033[32;1m$PREFIX/bin\033[0m."
-fi
+	read -p "Copy $bin to your \$PATH? [y|n]" answer
+	if [[ $answer = y ]] ; then
+		cp $HOME/arch/$bin $PREFIX/bin
+		printf "\033[32;1m$bin\033[0m copied to \033[32;1m$PREFIX/bin\033[0m.  "
+	fi
 }
 
 detectsystem ()
@@ -156,7 +156,7 @@ touchupsys ()
 	else
 		bash_profile 
 	fi
-	echo "PATH=$PATH:/root/bin" >> root/.bash_profile
+	echo "PATH=\$PATH:/root/bin" >> root/.bash_profile
 	echo ". /root/.bashrc" >> root/.bash_profile
 	if [ -d "$HOME/bin" ]; then
 		cp -r $HOME/bin root 2>/dev/null||:
