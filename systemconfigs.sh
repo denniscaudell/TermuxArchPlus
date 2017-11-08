@@ -44,10 +44,10 @@ finishsetup ()
 {
 	cat > root/bin/finishsetup.sh  <<- EOM
 	#!/bin/sh 
-	vi /etc/pacman.d/mirrorlist
-	pacman -Syu
 	vi /etc/locale.gen
 	locale-gen
+	vi /etc/pacman.d/mirrorlist
+	pacman -Syu
 	EOM
 	chmod 700 root/bin/finishsetup.sh 
 }
