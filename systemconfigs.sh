@@ -7,7 +7,7 @@
 startbin ()
 {
 	cat > $bin <<- EOM
-	#!/bin/sh -e
+	#!/data/data/com.termux/files/usr/bin/sh -e
 	unset LD_PRELOAD
 	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
 	EOM
@@ -17,14 +17,37 @@ startbin ()
 bashrc ()
 {
 	cat > root/.bashrc <<- EOM
-	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
+	alias ..="cd ../.. && pwd"
+	alias ...="cd ../../.. && pwd"
+	alias ....="cd ../../../.. && pwd"
+	alias .....="cd ../../../../.. && pwd"
+	alias c='cd .. && pwd'
+	alias cdd='cd /sdcard/Download/ && pwd'
+	alias e='exit'
+	alias h='history >> ~/.historyFile'
+	alias j='jobs'
+	alias l='ls -al'
+	alias p='pwd'
+	alias q='exit'
+	alias rf='rm -rf'
 	EOM
 }
 
 bash_profile ()
 {
 	cat > root/.bash_profile <<- EOM
-	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
+	PATH=$PATH:$HOME/bin
 	EOM
 }
 
+finishsetup ()
+{
+	cat > root/bin/finishsetup.sh  <<- EOM
+	#!/bin/sh -e
+	vi /etc/pacman.d/mirrorlist
+	pacman -Syu
+	vi /etc/locale.gen
+	locale-gen
+	EOM
+	chmod 700 root/bin/finishsetup.sh 
+}

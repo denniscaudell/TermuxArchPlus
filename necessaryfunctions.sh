@@ -92,12 +92,7 @@ integratycheck ()
 makebin ()
 {
 	bin=startArch.sh
-	cat > $bin <<- EOM
-	#!/bin/sh -e
-	unset LD_PRELOAD
-	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
-	EOM
-	chmod 700 $bin
+	startbin 
 	touchupsys 
 }
 
@@ -118,17 +113,20 @@ touchupsys ()
 	if [ -f "$HOME/.bashrc" ]; then
 		cp $HOME/.bashrc root/ 
 	else
-		touch root/.bashrc 
+		bashrc 
 	fi
 	if [ -f "$HOME/.bash_profile" ]; then
 		cp $HOME/.bash_profile root/ 
 	else
-		touch root/.bash_profile 
+		bash_profile 
 	fi
 	echo ". .bashrc" >> root/.bash_profile
 	if [ -d "$HOME/bin" ]; then
 		cp -r $HOME/bin root 2>/dev/null||:
+	else
+		mkdir -p root/bin
 	fi
+	finishsetup
 }
 
 makesystem ()
