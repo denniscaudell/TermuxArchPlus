@@ -43,10 +43,11 @@ callsystem ()
 
 copystart2path ()
 {
+	printf " 🕦 "
 	read -p "Copy $bin to your \$PATH? [y|n]" answer
 	if [[ $answer = y ]] ; then
 		cp $HOME/arch/$bin $PREFIX/bin
-		printf "\nCopied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m.  "
+		printf "\n 🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m.  "
 	fi
 }
 
