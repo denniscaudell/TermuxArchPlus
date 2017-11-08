@@ -46,7 +46,7 @@ copybin2path ()
 	printf " 🕦 "
 	while true; do
 	read -p "Copy $bin to your \$PATH? [y|n]" answer
-	if [[ $answer = [Yy]* ]] ; then
+	if [[ $answer = [Yy]* ]];then
 		cp $HOME/arch/$bin $PREFIX/bin
 		printf "\n\n 🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m."
 		break
@@ -57,6 +57,7 @@ copybin2path ()
 		printf "\nYou answered \033[33;1m$answer\033[0m.\n"
 		printf "\nAnswer Yes or No (y|n).\n\n"
 	fi
+	done
 }
 
 detectsystem ()
