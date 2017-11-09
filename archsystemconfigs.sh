@@ -72,7 +72,7 @@ finishsetup ()
 	\$ed /etc/pacman.d/mirrorlist
 	pacman -Syu
 	printf "\nUse \033[34;1mexit\033[32;1m to conclude this installation.\033[0m\n\n"
-	rm \$HOME/bin/finishsetup.sh
+	rm \$HOME/bin/finishsetup.sh 2>/dev/null||:
 	EOM
 	chmod 700 root/bin/finishsetup.sh 
 }
