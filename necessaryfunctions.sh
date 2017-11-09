@@ -115,7 +115,7 @@ integratycheck ()
 makebin ()
 {
 	bin=startArch.sh
-	startbin 
+	startbininit 
 	touchupsys 
 }
 
