@@ -8,7 +8,7 @@
 
 printdetectedsystem ()
 {
-	printf "\033[0m\n 🕜<🕛 Detected $(uname -mo) Operating System.  \n"
+	printf "\033[42;1m\n 🕜<🕛 Detected $(uname -mo) Operating System.  \033[0m\n"
 }
 
 printdownloading ()
