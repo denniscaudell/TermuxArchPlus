@@ -43,15 +43,15 @@ callsystem ()
 
 copybin2path ()
 {
-	printf " 🕦 "
+	printf " 🕦<🕛 "
 	while true; do
 	read -p "Copy $bin to your \$PATH? [y|n]" answer
 	if [[ $answer = [Yy]* ]];then
 		cp $HOME/arch/$bin $PREFIX/bin
-		printf "\n 🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m.  "
+		printf "\n 🕛=🕛 Copied \033[32;1m$bin\033[0m to \033[32;1m$PREFIX/bin\033[0m.  "
 		break
 	elif [[ $answer = [Nn]* ]];then
-		printf "\n 🕛 "
+		printf "\n 🕛=🕛 "
 		break
 	else
 		printf "\nYou answered \033[33;1m$answer\033[0m.\n"
