@@ -23,7 +23,7 @@ printfooter()
 
 printmd5check ()
 {
-	printf "\033[0m\n 🕠<🕛 Checking download integrity with md5sum.  This may take a little while.  \n\n 🕕 "
+	printf "\033[0m\n 🕠<🕛 Checking download integrity with md5sum.  This may take a little while.  \n\n 🕕<🕛 "
 }
 
 printmd5error ()
