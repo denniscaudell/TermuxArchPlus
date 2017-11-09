@@ -7,6 +7,7 @@
 startbin ()
 {
 	cat > $bin <<- EOM
+	export LD_PRELOAD=$PREFIX/lib/libtermux-exec.so
 	#!/bin/sh -e
 	unset LD_PRELOAD
 	exec proot --link2symlink -0 -r $HOME/arch/ -b /dev/ -b /sys/ -b /proc/ -b /storage/ -b $HOME -w $HOME /bin/env -i HOME=/root TERM="$TERM" PS1='[termux@arch \W]\$ ' LANG=$LANG PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash --login
@@ -41,6 +42,7 @@ bash_profile ()
 finishsetup ()
 {
 	cat > root/bin/finishsetup.sh  <<- EOM
+	export LD_PRELOAD=$PREFIX/lib/libtermux-exec.so
 	#!/bin/sh -e 
 	printf "\n\033[32;1m"
 	while true; do

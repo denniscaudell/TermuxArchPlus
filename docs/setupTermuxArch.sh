@@ -10,8 +10,6 @@ printf '\033]2;  Thank you for using `setupTermuxArch.sh` ðŸ“² \007'"\n\033[0m ð
 apt-get -qq update && apt-get -qq upgrade --yes
 apt-get -qq install bsdtar proot termux-exec wget --yes 
 
-export LD_PRELOAD=$PREFIX/lib/libtermux-exec.so
-
 depend ()
 {
 wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch/master/archsystemconfigs.sh
