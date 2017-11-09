@@ -53,9 +53,12 @@ copybin2path ()
 	elif [[ $answer = [Nn]* ]];then
 		printf "\n 🕛=🕛 "
 		break
+	elif [[ $answer = [Qq]* ]];then
+		printf "\n 🕛=🕛 "
+		break
 	else
-		printf "\nYou answered \033[33;1m$answer\033[0m.\n"
-		printf "\nAnswer Yes or No (y|n).\n\n"
+		printf "\n 🕦<🕛 You answered \033[33;1m$answer\033[0m.\n"
+		printf "\n 🕦<🕛 Answer Yes or No (y|n).\n\n"
 	fi
 	done
 }
