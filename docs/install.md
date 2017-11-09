@@ -7,7 +7,7 @@
 ```
 pkg install wget
 wget https://sdrausty.github.io/TermuxArch/setupTermuxArch.sh
-sh setupTermuxArch.sh
+bash setupTermuxArch.sh
 
 ```
 
@@ -17,7 +17,7 @@ sh setupTermuxArch.sh
 ```
 pkg install git
 cd && git clone https://github.com/sdrausty/TermuxArch
-sh TermuxArch/setupTermuxArch.sh
+bash TermuxArch/setupTermuxArch.sh
 
 ```
 Should you choose this option, the preferred method to work on projects at GitHub, clone to native space on device when you can.  See ["Notice to Collaborators"](Notice_to_Collaborators.md) for more information about collaborating.
@@ -26,7 +26,7 @@ Should you choose this option, the preferred method to work on projects at GitHu
 (3) This method can be run by tapping [this link](https://sdrausty.github.io/TermuxArch/setupTermuxArch.sh) which should download `setupTermuxArch.sh` into the `/sdcard/Download/` directory on your smartphone and tablet.  If this is where `setupTermuxArch.sh` was actually downloaded on your device, start it by simply running the next line of code. Otherwise, change the script PATH before executing `setupTermuxArch.sh` with `sh`.
 
 ```
-sh /sdcard/Download/setupTermuxArch.sh
+bash /sdcard/Download/setupTermuxArch.sh
 
 ```  
 
