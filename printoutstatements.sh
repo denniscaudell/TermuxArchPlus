@@ -34,7 +34,7 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[0m\n 🕡<🕛 Now uncompressing \033[32;1m$file\033[10;1m.  \033[37;1mThis will take much longer!  Be patient.\033[10;1m  If you are going to set your device aside, ensure \033[32;1mtermux-wake-lock\033[0m is active to let this process complete.  \n"
+	printf "\033[0m\n\033[32;1m 🕡<🕛 Download files integrity: OK  \n\n\033[0m 🕖<🕛 Now uncompressing \033[32;1m$file\033[10;1m.  \033[37;1mThis will take much longer!  Be patient.\033[10;1m  If you are going to set your device aside, ensure \033[32;1mtermux-wake-lock\033[0m is active to let this process complete.  \n"
 }
 
 printmd5syschkerror ()
@@ -50,7 +50,7 @@ printmd5syschksuccess ()
 
 printmismatch ()
 {
-	printf "\033[07;1m\033[31;1m\n 🔆 ERROR Unknown configuration!  Did not find an architecture and operating system match in\033[37;1m knownconfigurations.sh\033[31;1m!  \033[32;1mDetected $(uname -mo).  There still is hope.  Check at http://mirror.archlinuxarm.org/os/ and https://www.archlinux.org/mirrors/ for other available images and see if any match your device.  If you find a match, then please \033[37;1msubmit a pull request\033[32;1m at https://github.com/sdrausty/TermuxArch/pulls with script modifications.  Alternatively, \033[37;1msubmit a modification request\033[32;1m at https://github.com/sdrausty/TermuxArch/issues if you find a configuration match.  Please include output from \033[37;1muname -mo\033[32;1m on the device in order to expand autodetection for \033[37;1msetupTermuxArch.sh\033[32;1m.  See https://sdrausty.github.io/TermuxArchPlus/Known_Configurations for more information.  \n\n	\033[0m\033[32;1mRun setupTermuxArch.sh again. \033[31;1mExiting...  \033[0m\n"
+	printf "\033[07;1m\033[31;1m\n 🔆 ERROR Unknown configuration!  Did not find an architecture and operating system match in\033[37;1m knownconfigurations.sh\033[31;1m!  \033[32;1mDetected $(uname -mo).  There still is hope.  Check at http://mirror.archlinuxarm.org/os/ and https://www.archlinux.org/mirrors/ for other available images and see if any match your device.  If you find a match, then please \033[37;1msubmit a pull request\033[32;1m at https://github.com/sdrausty/TermuxArch/pulls with script modifications.  Alternatively, \033[37;1msubmit a modification request\033[32;1m at https://github.com/sdrausty/TermuxArch/issues if you find a configuration match.  Please include output from \033[37;1muname -mo\033[32;1m on the device in order to expand autodetection for \033[37;1msetupTermuxArch.sh\033[32;1m.  See https://sdrausty.github.io/TermuxArchPlus/Known_Configurations for more information.  \n\n	\033[32;1mRun setupTermuxArch.sh again. \033[31;1mExiting...  \033[0m\n"
 	exit 
 }
 
