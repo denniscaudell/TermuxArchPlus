@@ -25,9 +25,11 @@ wget -q -N --show-progress https://raw.githubusercontent.com/sdrausty/TermuxArch
 }
 
 # Main Block
+termux-wake-lock
 depend 
 callsystem 
 $HOME/arch/$bin ||:
 printtail
+termux-wake-unlock
 exit 
 
