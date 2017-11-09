@@ -13,7 +13,7 @@ printdetectedsystem ()
 
 printdownloading ()
 {
-	printf "\033[0m\n 🕑 \033[33;1m<\033[0m 🕛 Now downloading \033[32;1m$file\033[0m and the corresponding checksum.  This may take a long time depending on your Internet speed.  Be patient.  If you are going to set your device aside, ensure \033[32;1mtermux-wake-lock\033[0m is active to let this process complete.  \n\n"
+	printf "\033[0m\n 🕑 \033[33;1m<\033[0m 🕛 Now downloading \033[32;1m$file\033[0m and the corresponding checksum.  This may take a long time depending on your Internet speed.  \n\n"
 }
 
 printfooter()
@@ -34,7 +34,7 @@ printmd5error ()
 
 printmd5success ()
 {
-	printf "\033[0m\n\033[32;1m 🕡 \033[33;1m<\033[0m 🕛 Download files integrity: OK  \n\n\033[0m 🕖 \033[33;1m<\033[0m 🕛 Now uncompressing \033[32;1m$file\033[10;1m.  \033[37;1mThis will take much longer!  Be patient.\033[10;1m  If you are going to set your device aside, ensure \033[32;1mtermux-wake-lock\033[0m is active to let this process complete.  \n"
+	printf "\033[0m\n\033[32;1m 🕡 \033[33;1m<\033[0m 🕛 Download files integrity: OK  \n\n\033[0m 🕖 \033[33;1m<\033[0m 🕛 Now uncompressing \033[32;1m$file\033[10;1m.  \033[37;1mThis will take much longer!  Be patient.  \033[0m\n"
 }
 
 printmd5syschkerror ()
