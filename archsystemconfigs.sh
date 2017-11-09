@@ -41,6 +41,7 @@ bashrc ()
 	alias gca='git commit -a'
 	alias gcam='git commit -am'
 	alias gcm='git commit'
+	alias gcl='git clone'
 	alias gpl='git pull'
 	alias gp='git push'
 	#alias gp='git push https://username:password@github.com/username/repository.git master'
@@ -60,7 +61,7 @@ bash_profile ()
 finishsetup ()
 {
 	cat > root/bin/finishsetup.sh  <<- EOM
-	#!/bin/sh -e 
+	#!/bin/bash -e 
 	printf "\n\033[32;1m"
 	while true; do
 	read -p "Would you like to use nano or vi? (n|v)?"  nv
